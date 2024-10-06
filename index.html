@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Yes No</title>
+  </head>
+  <body>
+    <h1>Ask anything</h1>
+    <h2>yes / no</h2>
+    <form class="user-question-form" onsubmit="onAsk(event)">
+      <input
+        type="text"
+        class="user-question"
+        pattern="(^[A-z]{3,}\?$)"
+        value=""
+        title="Enter yor question and ?"
+        placeholder="Your question"
+        required
+      />
+      <button type="submit">Ask</button>
+    </form>
+
+    <div class="loader-box hide">
+      <img class="loader" src="svg/tube-spinner.svg" />
+    </div>
+
+    <div class="answer hide">
+      <h2></h2>
+      <img />
+    </div>
+
+    <div class="answer-yes hide">
+      <h2></h2>
+    </div>
+
+    <div class="answer-no hide">
+      <img />
+    </div>
+
+    <script src="lib/jquery-3.7.1.js"></script>
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/yesno.service.js"></script>
+    <script src="js/yesno.controller.js"></script>
+  </body>
+</html>
